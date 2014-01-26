@@ -1,0 +1,10 @@
+<project name="jenkins project" default="build">
+
+    <target name="phpunit">
+        <exec dir="." executable="phpunit" failonerror="true">
+            <arg line="--colors tests" />
+        </exec>
+    </target>
+
+    <target name="build" depends="phpunit"/>
+</project>
